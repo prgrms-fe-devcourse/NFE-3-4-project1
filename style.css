@@ -1,0 +1,28 @@
+.sidebar {
+  max-width: 240px;
+  width: 20vw;
+  height: 100vh;
+  background-color: #f8f8f7;
+  padding: 0px 15px;
+}
+
+.sidebar-header {
+  font-size: 14px;
+  padding-top: 14px;
+  font-weight: 600;
+}
+
+.sidebar-user {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 700px;
+  color: #91918e;
+  margin-top: 70px;
+}
+
+.sidebar-new-button {
+  position: fixed;
+  bottom: 40px;
+  left: 15px;
+  font-size: 8px;
+}
