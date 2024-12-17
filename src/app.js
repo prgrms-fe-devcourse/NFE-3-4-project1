@@ -15,6 +15,11 @@ export default function App({ $app }) {
       const newDocInfo = await generateDocument(null);
       // 에디터에게 새로운 페이지를 그린다는 것과, 그 id값을 넘겨준다.
       this.setState({ currentPage: newDocInfo.id });
+      history.pushState(
+        { pageId: newDocInfo.id },
+        null,
+        `/documents/${newDocInfo.id}`,
+      );
     },
   });
 
@@ -25,6 +30,7 @@ export default function App({ $app }) {
       // 현재의 id에 해당하는 doc을 지우고, state값을 'home'으로 변경한다.
       await deleteDocument(this.state.currentPage);
       this.setState({ currentPage: 'home' });
+      history.pushState(null, null, '/');
     },
   });
 
