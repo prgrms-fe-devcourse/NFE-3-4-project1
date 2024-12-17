@@ -29,4 +29,21 @@ export async function generateDocument(parent) {
   }
 }
 
-export function deleteDocument() {}
+export async function deleteDocument(id) {
+  try {
+    const response = await fetch(`${BASE_URL}/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-username': '4/5_TEAM5-user',
+      },
+    });
+    if (!response.ok) {
+      throw new ERROR(response);
+    }
+  } catch (err) {
+    const { statusCode, error, message } = err;
+    console.log(ERROR.DELETE_DOCUMENT);
+    console.log(`${statusCode} - ${error} : ${message}`);
+  }
+}

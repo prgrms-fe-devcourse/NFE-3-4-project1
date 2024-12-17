@@ -1,4 +1,4 @@
-export default function Editor({ $target, initialState }) {
+export default function Editor({ $target, initialState, onDeleteClick }) {
   // eslint-disable-next-line no-undef
   const $editor = document.createElement('div');
   $target.appendChild($editor);
@@ -21,7 +21,10 @@ export default function Editor({ $target, initialState }) {
         <button class='editor-delete-button btn btn-danger'>삭제</button>
       </div>`;
 
-      // console.log('에디터 페이지 에서 받는 Id', this.state);
+      const $deleteButton = $editor.querySelector('.editor-delete-button');
+      $deleteButton.addEventListener('click', () => {
+        onDeleteClick();
+      });
     }
   };
 

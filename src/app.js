@@ -2,7 +2,7 @@
 /* eslint-disable no-new */
 import Sidebar from './components/Sidebar.js';
 import Editor from './components/Editor.js';
-import { generateDocument } from './api/api.js';
+import { deleteDocument, generateDocument } from './api/api.js';
 
 export default function App({ $app }) {
   this.state = {
@@ -21,8 +21,10 @@ export default function App({ $app }) {
   const editor = new Editor({
     $target: $app,
     initialState: this.state.currentPage,
-    onDeleteClick: () => {
+    onDeleteClick: async () => {
       // 현재의 id에 해당하는 doc을 지우고, state값을 'home'으로 변경한다.
+      await deleteDocument(this.state.currentPage);
+      this.setState({ currentPage: 'home' });
     },
   });
 
