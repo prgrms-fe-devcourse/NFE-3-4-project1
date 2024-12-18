@@ -2,7 +2,7 @@
 /* eslint-disable no-new */
 import Sidebar from './components/Sidebar.js';
 import Editor from './components/Editor.js';
-import { deleteDocument, generateDocument } from './api/api.js';
+import { deleteDocument, generateDocument, updateDocument } from './api/api.js';
 
 export default function App({ $app }) {
   // 초기 상태: URL을 기준으로 설정
@@ -10,9 +10,16 @@ export default function App({ $app }) {
   const currentPage = pathname.startsWith('/documents/')
     ? pathname.split('/documents/')[1]
     : 'home';
+  let documentId = pathname.startsWith('/documents/')
+    ? pathname.split('/')[2]
+    : null;
 
   this.state = {
-    currentPage,
+    currentPage: currentPage, // 'home' | document.id
+    documents: {
+      title: '',
+      content: '',
+    },
   };
 
   // Sidebar 컴포넌트 생성
@@ -23,23 +30,29 @@ export default function App({ $app }) {
       console.log('onclick에서 전달되는 parnetID', parentId);
       const newDocInfo = await generateDocument(parentId);
       this.setState({ currentPage: newDocInfo.id });
-      history.pushState(
-        { pageId: newDocInfo.id },
-        null,
-        `/documents/${newDocInfo.id}`,
-      );
+      documentId = newDocInfo.id;
+      location.href = `/documents/${newDocInfo.id}`;
+      // history.pushState(
+      //   { pageId: newDocInfo.id },
+      //   null,
+      //   `/documents/${newDocInfo.id}`,
+      // );
     },
   });
 
-  // Editor 컴포넌트 생성
   const editor = new Editor({
     $target: $app,
-    initialState: this.state.currentPage,
+    documentId: documentId,
+    initialState: this.state,
     onDeleteClick: async () => {
       // 문서 삭제 후 홈으로 이동
       await deleteDocument(this.state.currentPage);
       this.setState({ currentPage: 'home' });
       history.pushState(null, null, '/');
+    },
+    onEditing: documents => {
+      console.log(documents);
+      updateDocument(documents);
     },
   });
 
