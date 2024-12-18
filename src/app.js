@@ -8,12 +8,15 @@ export default function App({ $app }) {
   this.state = {
     currentPage: 'home', // 'home' | document.id
   };
+  const $path = location.pathname;
+  const $query = location.search;
+
+  console.log($path, $query);
 
   new Sidebar({
     $target: $app,
     onClick: async () => {
       const newDocInfo = await generateDocument(null);
-      // 에디터에게 새로운 페이지를 그린다는 것과, 그 id값을 넘겨준다.
       this.setState({ currentPage: newDocInfo.id });
       history.pushState(
         { pageId: newDocInfo.id },
@@ -27,7 +30,6 @@ export default function App({ $app }) {
     $target: $app,
     initialState: this.state.currentPage,
     onDeleteClick: async () => {
-      // 현재의 id에 해당하는 doc을 지우고, state값을 'home'으로 변경한다.
       await deleteDocument(this.state.currentPage);
       this.setState({ currentPage: 'home' });
       history.pushState(null, null, '/');
@@ -36,6 +38,6 @@ export default function App({ $app }) {
 
   this.setState = nextState => {
     this.state = nextState;
-    editor.setState(this.state.currentPage);
+    editor.setState(this.state.currentPage); // 상태 변화에 따라 Editor 업데이트
   };
 }
