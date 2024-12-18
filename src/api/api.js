@@ -47,3 +47,46 @@ export async function deleteDocument(id) {
     console.log(`${statusCode} - ${error} : ${message}`);
   }
 }
+
+const API_URL = "https://kdt-api.fe.dev-cos.com";
+const X_USERNAME_KEY = "blabla2";
+
+// API의 /documents 엔드포인트에서 문서 목록을 가져옴
+export async function getDocuments() {
+  const result = await fetch(`${API_URL}/documents`, {
+    headers: {
+      "x-username": X_USERNAME_KEY,
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => data);
+  // FIXME: error 핸들링
+  // .catch((err) => {
+  //   console.error("API Error: ", err);
+  // });
+
+  return result;
+}
+
+// /documents 엔드포인트로 새로운 문서를 추가
+// body: {"title": string, "content": string, "parent": null | number}
+export async function postDocuments({ title, content, parent }) {
+  const result = await fetch(`${API_URL}/documents`, {
+    method: "post",
+    body:  JSON.stringify({
+      title,
+      content,
+      parent,
+    }),
+    headers: {
+      "x-username": X_USERNAME_KEY,
+      "Content-Type": "application/json"
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => data);
+  // FIXME: error 핸들링
+  // .catch((err) => {
+  //   console.error("API Error: ", err);
+  // });
+}
