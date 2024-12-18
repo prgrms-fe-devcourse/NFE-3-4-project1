@@ -121,3 +121,6 @@ button {
   top: 20px;
   right: 20px;
 }
+.title {
+  cursor: pointer;
+}
