@@ -56,7 +56,6 @@ function createMainDocument(documents) {
       </div>
       </div>`;
   });
-  //console.log('temp: ', temp.join(''));
 
   return temp.join('');
 }

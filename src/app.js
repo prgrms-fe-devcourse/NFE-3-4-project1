@@ -15,7 +15,7 @@ export default function App({ $app }) {
     : null;
 
   this.state = {
-    currentPage: currentPage, // 'home' | document.id
+    currentPage, // 'home' | document.id
     documents: {
       title: '',
       content: '',
@@ -27,22 +27,16 @@ export default function App({ $app }) {
     $target: $app,
     onClick: async parent => {
       const parentId = parent === null ? null : parent;
-      console.log('onclick에서 전달되는 parnetID', parentId);
       const newDocInfo = await generateDocument(parentId);
       this.setState({ currentPage: newDocInfo.id });
       documentId = newDocInfo.id;
       location.href = `/documents/${newDocInfo.id}`;
-      // history.pushState(
-      //   { pageId: newDocInfo.id },
-      //   null,
-      //   `/documents/${newDocInfo.id}`,
-      // );
     },
   });
 
   const editor = new Editor({
     $target: $app,
-    documentId: documentId,
+    documentId,
     initialState: this.state,
     onDeleteClick: async () => {
       // 문서 삭제 후 홈으로 이동

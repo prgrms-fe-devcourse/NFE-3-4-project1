@@ -123,53 +123,6 @@ button {
   }
 }
 
-/* 
-.main-document-holder {
-  width: 100%;
-  height: 28px;
-  font-size: 12px;
-  font-weight: 700px;
-  color: #5f5e5b;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2px 5px;
-  border-radius: 3px;
-}
-
-.sub-document {
-  width: 90%;
-  height: 28px;
-  font-size: 12px;
-  font-weight: 700px;
-  color: #5f5e5b;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2px 5px;
-  border-radius: 3px;
-}
-
-.main-document-holder:hover {
-  background-color: #dfdfdd;
-  .main-document-plus-button {
-    visibility: visible;
-  }
-}
-
-.sub-document:hover {
-  background-color: #dfdfdd;
-  .sub-document-plus-button {
-    visibility: visible;
-  }
-}
-
-.main-document-plus-button,
-.sub-document-plus-button {
-  background-color: #dfdfdd;
-  visibility: hidden;
-} */
-
 .document-list {
   height: 80vh;
   overflow-y: scroll;
