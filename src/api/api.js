@@ -2,6 +2,7 @@
 import ERROR from '../constants/Error.js';
 
 const BASE_URL = 'https://kdt-api.fe.dev-cos.com/documents';
+const USER_ID = '4/5_TEAM5-user';
 
 // 새로운 Document 생성
 // eslint-disable-next-line consistent-return
@@ -11,7 +12,7 @@ export async function generateDocument(parent) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-username': '4/5_TEAM5-user',
+        'x-username': USER_ID,
       },
       body: JSON.stringify({
         title: '시작하기',
@@ -35,7 +36,7 @@ export async function deleteDocument(id) {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
-        'x-username': '4/5_TEAM5-user',
+        'x-username': USER_ID,
       },
     });
     if (!response.ok) {
@@ -48,18 +49,18 @@ export async function deleteDocument(id) {
   }
 }
 
-const API_URL = "https://kdt-api.fe.dev-cos.com";
-const X_USERNAME_KEY = "blabla2";
+const API_URL = 'https://kdt-api.fe.dev-cos.com';
+const X_USERNAME_KEY = 'blabla2';
 
 // API의 /documents 엔드포인트에서 문서 목록을 가져옴
 export async function getDocuments() {
   const result = await fetch(BASE_URL, {
     headers: {
-      "x-username": "4/5_TEAM5-user",
+      'x-username': USER_ID,
     },
   })
-    .then((response) => response.json())
-    .then((data) => data);
+    .then(response => response.json())
+    .then(data => data);
   // FIXME: error 핸들링
   // .catch((err) => {
   //   console.error("API Error: ", err);

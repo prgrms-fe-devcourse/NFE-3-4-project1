@@ -77,7 +77,7 @@ button {
 }
 
 .sidebar-new-button:hover {
-  background-color: #adada8;
+  background-color: #91918d;
 }
 
 .main-document {
@@ -87,6 +87,20 @@ button {
   font-weight: 700px;
   color: #5f5e5b;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.sub-document {
+  width: 90%;
+  height: 28px;
+  font-size: 12px;
+  font-weight: 700px;
+  color: #5f5e5b;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 2px 5px;
   border-radius: 3px;
@@ -94,6 +108,22 @@ button {
 
 .main-document:hover {
   background-color: #dfdfdd;
+  .main-document-plus-button {
+    visibility: visible;
+  }
+}
+
+.sub-document:hover {
+  background-color: #dfdfdd;
+  .sub-document-plus-button {
+    visibility: visible;
+  }
+}
+
+.main-document-plus-button,
+.sub-document-plus-button {
+  background-color: #dfdfdd;
+  visibility: hidden;
 }
 
 .document-list {

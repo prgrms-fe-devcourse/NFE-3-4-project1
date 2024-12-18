@@ -15,8 +15,9 @@ export default function App({ $app }) {
 
   new Sidebar({
     $target: $app,
-    onClick: async () => {
-      const newDocInfo = await generateDocument(null);
+    onClick: async parent => {
+      const parentId = parent === null ? null : parent;
+      const newDocInfo = await generateDocument(parentId);
       this.setState({ currentPage: newDocInfo.id });
       history.pushState(
         { pageId: newDocInfo.id },
