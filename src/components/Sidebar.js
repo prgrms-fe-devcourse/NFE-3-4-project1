@@ -47,9 +47,13 @@ function createMainDocument(documents) {
   const temp = documents.map(data => {
     return `
       <div class="main-document" data-id=${data.id} >
-        <span class="title" data-parentId=${data.id} onclick="location='${BASE_URL}/${data.id}'">${data.title}</span>
+      <div class="main-document-holder doc-holder">
+        <span class="doc-title" data-parentId=${data.id} onclick="location='${BASE_URL}/${data.id}'">${data.title}</span>
         <button class='document-plus-button' data-parentid=${data.id} >+</button>
+      </div>
+      <div class="sub-document-list">
         ${createSubDocument(data?.documents)}
+      </div>
       </div>`;
   });
   //console.log('temp: ', temp.join(''));
@@ -63,8 +67,10 @@ function createSubDocument(documents) {
   const temp = documents.map(data => {
     return `
       <div class="sub-document" data-id=${data.id}" onclick="location='${BASE_URL}/${data.id}'" >
-        <span class="sub-doc-title" data-parentId=${data.id} onclick="location='${BASE_URL}/${data.id}'">${data.title}</span>
-        <button class='sub-document-plus-button document-plus-button' data-parentid=${data.id} >+</button>
+      <div class='doc-holder'>
+      <span class="doc-title" data-parentId=${data.id} onclick="location='${BASE_URL}/${data.id}'">${data.title}</span>
+      <button class='sub-document-plus-button document-plus-button' data-parentid=${data.id} >+</button>
+      </div>
         ${createSubDocument(data?.documents)}
       </div>`;
   });
