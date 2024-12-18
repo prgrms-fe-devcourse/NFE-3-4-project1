@@ -49,8 +49,25 @@ export async function deleteDocument(id) {
   }
 }
 
-const API_URL = 'https://kdt-api.fe.dev-cos.com';
-const X_USERNAME_KEY = 'blabla2';
+// 특정 id를 가진 Doc 조회
+export async function getSelectedDocument(id) {
+  try {
+    const response = await fetch(`${BASE_URL}/${id}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-username': USER_ID,
+      },
+    });
+    if (!response.ok) {
+      throw new ERROR(response);
+    }
+  } catch (err) {
+    const { statusCode, error, message } = err;
+    console.log(ERROR.GET_SELECTED_DOCUMENT);
+    console.log(`${statusCode} - ${error} : ${message}`);
+  }
+}
 
 // API의 /documents 엔드포인트에서 문서 목록을 가져옴
 export async function getDocuments() {
@@ -61,10 +78,5 @@ export async function getDocuments() {
   })
     .then(response => response.json())
     .then(data => data);
-  // FIXME: error 핸들링
-  // .catch((err) => {
-  //   console.error("API Error: ", err);
-  // });
-
   return result;
 }
