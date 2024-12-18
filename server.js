@@ -8,7 +8,6 @@ app.use(express.static(path.join(__dirname))); // 루트 폴더 서빙
 
 // 라우팅: 모든 경로 요청에 대해 index.html 반환
 app.get('*', (req, res) => {
-  console.log('@@@');
   res.sendFile(path.join(__dirname, 'src/public/index.html'));
 });
 
