@@ -7,9 +7,11 @@ export default function Sidebar({ $target, onClick }) {
   this.render = () => {
     $sidebar.innerHTML = `
       <div class='sidebar-header'> 🖥️ 프룽이의 Notion </div>
-      <div class='sidebar-user'> 개인 페이지 </div>
-      <button class='sidebar-new-button btn btn-secondary btn-sm'>새로 만들기</button>
-    `;
+      <div class='sidebar-user'> 
+        <p>개인 페이지</p>
+        <button class='sidebar-new-button'> + </button>
+      </div>
+      `;
 
     const $button = $sidebar.querySelector('button.sidebar-new-button');
     $button.addEventListener('click', e => {

@@ -9,6 +9,17 @@ input:focus,
 textarea:focus {
   outline: none;
 }
+
+button {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer;
+}
+
 .sidebar {
   max-width: 240px;
   width: 20vw;
@@ -25,17 +36,48 @@ textarea:focus {
 
 .sidebar-user {
   width: 100%;
+  height: 28px;
   font-size: 12px;
   font-weight: 700px;
   color: #91918e;
   margin-top: 70px;
+  padding: 2px 7px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-user:hover {
+  background-color: #dfdfdd;
+
+  .sidebar-new-button {
+    visibility: visible;
+  }
+}
+
+.sidebar-user p {
+  display: block;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 .sidebar-new-button {
-  position: fixed;
-  bottom: 40px;
-  left: 15px;
-  font-size: 8px;
+  font-size: 12px;
+  visibility: hidden;
+  width: 17px;
+  height: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1px;
+}
+
+.sidebar-new-button:hover {
+  background-color: #adada8;
 }
 
 .editor-wrapper {
