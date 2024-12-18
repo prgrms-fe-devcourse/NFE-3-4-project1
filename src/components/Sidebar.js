@@ -33,7 +33,9 @@ export default function Sidebar({ $target, onClick }) {
     $documentList.addEventListener('click', event => {
       const { target } = event;
       if (target.classList.contains('document-plus-button')) {
-        const parentId = target.dataset.parentId;
+        console.log(target.dataset);
+        const parentId = target.dataset.parentid;
+        console.log('이벤트 리스너에서 parentid잘 가쳐오나?', parentId);
         onClick(parentId);
       }
     });
@@ -46,7 +48,7 @@ function createMainDocument(documents) {
     return `
       <div class="main-document" data-id=${data.id} >
         <span class="title" data-parentId=${data.id} onclick="location='${BASE_URL}/${data.id}'">${data.title}</span>
-        <button class='document-plus-button'>+</button>
+        <button class='document-plus-button' data-parentid=${data.id} >+</button>
         ${createSubDocument(data?.documents)}
       </div>`;
   });
@@ -62,7 +64,7 @@ function createSubDocument(documents) {
     return `
       <div class="sub-document" data-id=${data.id}" onclick="location='${BASE_URL}/${data.id}'" >
         <span class="sub-doc-title" data-parentId=${data.id} onclick="location='${BASE_URL}/${data.id}'">${data.title}</span>
-        <button class='sub-document-plus-button'>+</button>
+        <button class='sub-document-plus-button document-plus-button' data-parentid=${data.id} >+</button>
         ${createSubDocument(data?.documents)}
       </div>`;
   });

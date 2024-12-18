@@ -20,6 +20,7 @@ export default function App({ $app }) {
     $target: $app,
     onClick: async parent => {
       const parentId = parent === null ? null : parent;
+      console.log('onclick에서 전달되는 parnetID', parentId);
       const newDocInfo = await generateDocument(parentId);
       this.setState({ currentPage: newDocInfo.id });
       history.pushState(

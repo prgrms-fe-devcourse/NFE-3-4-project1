@@ -22,6 +22,7 @@ export async function generateDocument(parent) {
     if (!response.ok) {
       throw new Error(response);
     }
+
     return response.json();
   } catch (err) {
     const { statusCode, error, message } = err;
