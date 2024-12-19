@@ -9,7 +9,7 @@ export default function Editor({
   // eslint-disable-next-line no-undef
 
   const $editor = document.createElement('div');
-
+  const BASE_URL = '/documents';
   // setState 될 때마다 재렌더링 되는 문제 해결을 위한 코드
   let isInitialize = false;
 
@@ -24,12 +24,8 @@ export default function Editor({
   };
 
   this.render = async () => {
-    // console.log(this.state);
     const data = await getSelectedDocument(this.state.currentPage);
-    console.log(data);
-    const { document } = this.state || {};
-    const { title = '', content = '' } = document || {};
-    // $editor.innerHTML = this.state
+
     if (this.state.currentPage === 'home') {
       $editor.innerHTML = `
       <div class="homeEditor-container homeEditor-emoji">
@@ -49,8 +45,22 @@ export default function Editor({
         <textarea id='editor-textarea' class='editor-textarea' name='content' placeholder='지금 바로 작성을 시작해보세요'>${
           data.content ? data.content : '내용을 입력하세요'
         }</textarea>
+        
         <button class='editor-delete-button btn btn-danger'>삭제</button>
-        </div>`;
+        <div class="locationBtn">
+        ${
+          data.documents
+            ? data.documents
+                .map(item => {
+                  return `<button class="btn btn-outline-secondary" data-parentId=${item.id} onclick="location='${BASE_URL}/${item.id}'">${item.title}</button>`;
+                })
+                .join('')
+            : null
+        }
+        </div>
+        </div>
+        `;
+
         isInitialize = true;
       }
 

@@ -43,7 +43,8 @@ export default function App({ $app }) {
       // 문서 삭제 후 홈으로 이동
       await deleteDocument(this.state.currentPage);
       this.setState({ currentPage: 'home' });
-      history.pushState(null, null, '/');
+      history.pushState(null, null, 'home');
+      location.href = `/documents/home`;
     },
     onEditing: documents => {
       if (timer !== null) {
@@ -63,16 +64,16 @@ export default function App({ $app }) {
     editor.setState(this.state.currentPage); // 상태 변경 시 Editor 업데이트
   };
 
-  // 라우터: URL 변경에 따라 상태 업데이트
-  const router = () => {
-    const { pathname } = location;
-    const currentPage = pathname.startsWith('/documents/')
-      ? pathname.split('/documents/')[1]
-      : 'home';
+  // // 라우터: URL 변경에 따라 상태 업데이트
+  // const router = () => {
+  //   const { pathname } = location;
+  //   const currentPage = pathname.startsWith('/documents/')
+  //     ? pathname.split('/documents/')[1]
+  //     : 'home';
 
-    this.setState({ currentPage });
-  };
+  //   this.setState({ currentPage });
+  // };
 
-  // 뒤로가기/앞으로가기 이벤트 처리
-  window.addEventListener('popstate', router);
+  // // 뒤로가기/앞으로가기 이벤트 처리
+  // window.addEventListener('popstate', router);
 }

@@ -150,6 +150,7 @@ button {
 }
 .editor-form {
   width: 60%;
+  height: 1;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -170,12 +171,14 @@ button {
 
 .editor-textarea {
   margin-top: 56px;
+  overflow-y: hidden;
+  height: 50vh;
   border: none;
+  resize: none;
 }
 
 .editor-delete-button {
   width: 50px;
-  height: 30px;
   font-size: 10px;
   position: absolute;
   top: 20px;
@@ -183,4 +186,21 @@ button {
 }
 .title {
   cursor: pointer;
+}
+.locationBtn {
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30px;
+}
+.btn-outline-secondary {
+  padding: 5px 20px;
+  border: none;
+  margin: 0 10px;
+  box-shadow: 5px 5px 10px #e4e1db;
+  font-family: 'Noto Sans KR', serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
