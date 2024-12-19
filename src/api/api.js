@@ -94,7 +94,7 @@ export async function updateDocument(doc) {
     return response.json();
   } catch (err) {
     const { statusCode, error, message } = err;
-    // console.log(ERROR.POST_NEW_DOCUMENT);
-    // console.log(`${statusCode} - ${error} : ${message}`);
+    console.log(ERROR.PUT_DOCUMENT);
+    console.log(`${statusCode} - ${error} : ${message}`);
   }
 }
