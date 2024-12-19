@@ -11,36 +11,42 @@
 - 문서 생성, 삭제, 편집, 검색, 애니메이션 같은 주요 기능을 구현하면서 SPA의 기본 구조를 설계하는 데 초점을 맞추었습니다.
 <br><br><br>
 
-## 👥 팀원 소개
+## 🎯 프로젝트 목표
+- Vanilla JavaScript만을 활용하여 SPA를 설계하고 구현
+- HISTORY API를 활용한 페이지 전환과 상태 관리 학습
+- JavaScript의 이벤트 리스너의 활용과 비동기 통신에 대한 이해
+- 팀원들과의 원활한 소통을 위한 협업 플렛폼 활용 
+<br><br><br>
+
+## 👥 팀원 소개 및 역할
 <center>
 <table>
   <tbody>
     <tr>
       <td align="center"><img src="https://github.com/user-attachments/assets/afbe467c-8dc7-4bbe-bb3b-6e4eab5f5536" width="100px;" height="130px"/></td>
       <td align="center"><img src="https://github.com/user-attachments/assets/a1849338-6012-4536-9719-a6d580e62e11" width="100px;" /></td>
-      <td align="center"><img src="https://github.com/user-attachments/assets/b799a14e-6263-4cd9-8ff9-b7f8ab2afb9d" width="100px;" height="130px"/></td>
+      <td align="center"><img src="https://github.com/user-attachments/assets/b799a14e-6263-4cd9-8ff9-b7f8ab2afb9d" width="150px;" height="130px"/></td>
       <td align="center"><img src="https://github.com/user-attachments/assets/5c7219e5-57eb-4361-bed7-bf6d68bad6e9" width="100px;" /></td>
       <td align="center"><img src="https://github.com/user-attachments/assets/1a210965-2f67-44ce-8f6f-703355dbefc2" width="100px;" /></td>
     </tr>
     <center>
     <tr>
-      <td><a href="https://github.com/kimyougmin">김영민 (팀장)</a></td>
+      <td><a href="https://github.com/kimyougmin">김영민</a></td>
       <td><a href="https://github.com/kdh990315">김동현</a></td>
       <td><a href="https://github.com/erase0250">김지우</a></td>
       <td><a href="https://github.com/Castillou">전성우</a></td>
       <td><a href="https://github.com/hhj4569">한형주</a></td>
     </tr>
-     
+      <tr>
+      <td><a>· 저장된 글 제목 출력<br>· 저장된 글의 하위 페이지 출력</a></td>
+      <td><a>· 제목으로 검색 (단어 기준)</a></td>
+      <td><a>· 글 삭제</a></td>
+      <td><a>· 하위 페이지 클릭 시 수정</a></td>
+      <td><a>· 글 작성</a></td>
+    </tr>
   </tbody>
 </table>
 </center>
-<br><br><br>
-
-## 🎯 프로젝트 목표
-- Vanilla JavaScript만을 활용하여 SPA를 설계하고 구현
-- HISTORY API를 활용한 페이지 전환과 상태 관리 학습
-- JavaScript의 이벤트 리스너의 활용과 비동기 통신에 대한 이해
-- 팀원들과의 원활한 소통을 위한 협업 플렛폼 활용 
 <br><br><br>
 
 ## ⚙️ 주요 기능
