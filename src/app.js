@@ -63,17 +63,4 @@ export default function App({ $app }) {
     this.state = nextState;
     editor.setState(this.state.currentPage); // 상태 변경 시 Editor 업데이트
   };
-
-  // // 라우터: URL 변경에 따라 상태 업데이트
-  // const router = () => {
-  //   const { pathname } = location;
-  //   const currentPage = pathname.startsWith('/documents/')
-  //     ? pathname.split('/documents/')[1]
-  //     : 'home';
-
-  //   this.setState({ currentPage });
-  // };
-
-  // // 뒤로가기/앞으로가기 이벤트 처리
-  // window.addEventListener('popstate', router);
 }
