@@ -38,11 +38,11 @@
       <td><a href="https://github.com/hhj4569">한형주</a></td>
     </tr>
       <tr>
-      <td><a>· 저장된 글 제목 출력<br>· 저장된 글의 하위 페이지 출력</a></td>
-      <td><a>· 제목으로 검색 (단어 기준)</a></td>
-      <td><a>· 글 삭제</a></td>
-      <td><a>· 하위 페이지 클릭 시 수정</a></td>
-      <td><a>· 글 작성</a></td>
+      <td><a>· 팀 리드 및 협업 관리<br>· 문서 불러오기 및 출력 기능</a></td>
+      <td><a>· 키워드 검색 기능</a></td>
+      <td><a>· 글 수정 기능<br>· 토스트 모달 구현</a></td>
+      <td><a>· 글 삭제 기능</a></td>
+      <td><a>· 새로운 글 추가 기능</a></td>
     </tr>
   </tbody>
 </table>
@@ -60,10 +60,9 @@
 <br><br><br>
 
 ## 🛠️ 기술 스택
-<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-<img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/>
-![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) 
-![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> 
+<img src="https://img.shields.io/badge/Vercel-%23000000?style=for-the-badge&logo=vercel&logoColor=white"/>
+ <img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/> ![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 <br><br><br>
 
 ## 📁 폴더 구조
