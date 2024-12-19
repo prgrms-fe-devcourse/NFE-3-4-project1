@@ -1,0 +1,37 @@
+.document-control-btn {
+  visibility: hidden;
+}
+
+.item-container:hover > .document-control-btn {
+  visibility: visible;
+}
+
+.document-control-btn > button:hover {
+  background: var(--bs-gray-200);
+}
+
+.item-container:hover > div > #collapse > *:first-child {
+  display: none;
+}
+
+#collapse > *:last-child {
+  display: none;
+}
+
+.item-container:hover > div > #collapse > *:last-child {
+  display: block;
+}
+
+button#write{
+  background: var(--bg-gray);
+  &:hover{background:var(--bg-hover)}
+}
+
+#navi{
+  transition: all .6s ease-in-out;
+}
+#navi.slidedown{
+  margin-left: -100%;
+}
+#nav-expand{transition: all .3s ease-in-out;}
+#nav-expand.hide{opacity: 0; cursor:default;}

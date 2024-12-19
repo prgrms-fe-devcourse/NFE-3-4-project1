@@ -1,0 +1,51 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+/* Option 2: Import via CSS */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+:root {
+  --text-color-light: #5f5e5b;
+  --text-color: #37352f;
+  --text-color-dark: #1d1b16;
+
+  --bg-white: #fff;
+  --bg-ligthGray: #f8f8f7;
+  --bg-gray: #f1f1ef;
+  --bg-hover: #dddddd;
+  --bg-darkGray: #5f5e5b;
+  --bg-op: rgba(0, 0, 0, 0.3);
+}
+
+* {
+  word-break: keep-all;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI",
+    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    sans-serif;
+  color: var(--text-color);
+}
+.main {
+  overflow-y: auto;
+  height: 100%;
+}
+
+#title,
+#contents {
+  outline: none;
+}
+
+.navi {
+  background-color: var(--bg-ligthGray) !important;
+  border-right: 1px solid var(--bg-gray);
+  height: 100vh;
+  overflow-y: auto;
+  max-width: 360px;
+}
+
+#savingStatus {
+  color: var(--text-color);
+}
+.spinner-border {
+  --bs-spinner-width: 1rem;
+  --bs-spinner-height: 1rem;
+  --bs-spinner-border-width: 0.15em;
+}
