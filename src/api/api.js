@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/extensions
 import ERROR from '../constants/Error.js';
 const BASE_URL = 'https://kdt-api.fe.dev-cos.com/documents';
-const USER_ID = '4/5_TEAM5-user2';
+const USER_ID = '4/5_TEAM5-user3';
 // 새로운 Document 생성
 // eslint-disable-next-line consistent-return
 export async function generateDocument(parent) {
@@ -55,9 +55,11 @@ export async function getSelectedDocument(id) {
         'x-username': USER_ID,
       },
     });
+    console.log(`response값 : ${response}`);
     if (!response.ok) {
       throw new ERROR(response);
     }
+    return response.json();
   } catch (err) {
     const { statusCode, error, message } = err;
     console.log(ERROR.GET_SELECTED_DOCUMENT);
@@ -92,7 +94,7 @@ export async function updateDocument(doc) {
     return response.json();
   } catch (err) {
     const { statusCode, error, message } = err;
-    console.log(ERROR.POST_NEW_DOCUMENT);
-    console.log(`${statusCode} - ${error} : ${message}`);
+    // console.log(ERROR.POST_NEW_DOCUMENT);
+    // console.log(`${statusCode} - ${error} : ${message}`);
   }
 }
