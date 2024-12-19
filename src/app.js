@@ -45,7 +45,7 @@ export default function App({ $app }) {
       history.pushState(null, null, '/');
     },
     onEditing: documents => {
-      console.log(documents);
+      // console.log(documents);
       updateDocument(documents);
     },
   });
