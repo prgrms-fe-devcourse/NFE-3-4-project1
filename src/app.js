@@ -34,6 +34,7 @@ export default function App({ $app }) {
     },
   });
 
+  let timer = null;
   const editor = new Editor({
     $target: $app,
     documentId,
@@ -45,8 +46,14 @@ export default function App({ $app }) {
       history.pushState(null, null, '/');
     },
     onEditing: documents => {
+      if (timer !== null) {
+        clearTimeout(timer);
+      }
       // console.log(documents);
-      updateDocument(documents);
+      timer = setTimeout(async () => {
+        const result = await updateDocument(documents);
+        console.log(result);
+      }, 1000);
     },
   });
 

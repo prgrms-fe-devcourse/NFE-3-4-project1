@@ -63,10 +63,20 @@ export default function Editor({
 
   this.render();
 
-  setInterval(() => {
+  // let timer = null;
+  // if (timer !== null) {
+  //   clearInterval(timer);
+  // }
+  // timer = setInterval(() => {
+  //   const title = $editor.querySelector('.editor-input').value;
+  //   const content = $editor.querySelector('.editor-textarea').value;
+
+  //   onEditing({ id: documentId, title, content });
+  // }, 3000);
+
+  $editor.addEventListener('keyup', () => {
     const title = $editor.querySelector('.editor-input').value;
     const content = $editor.querySelector('.editor-textarea').value;
-
     onEditing({ id: documentId, title, content });
-  }, 3000);
+  });
 }
