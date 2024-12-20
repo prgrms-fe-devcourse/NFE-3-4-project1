@@ -186,9 +186,7 @@ const createNewPage = async (parentId, title) => {
     }
 
     const newDoc = await response.json();
-    console.log("새 페이지 생성 성공:", newDoc);
-
-    // 새 페이지가 추가된 후 사이드바를 다시 렌더링
+    console.log("새 페이지 생성 성공:", newDoc);    // 새 페이지가 추가된 후 사이드바를 다시 렌더링
     await renderSidebar(); // 중복된 페이지를 추가하지 않도록 처리
   } catch (error) {
     console.error("새 페이지 생성 중 오류 발생:", error);
