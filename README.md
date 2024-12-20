@@ -1,8 +1,8 @@
 # While(true) - 노션 클로닝
 
 ## Developers
-|Frontend|Frontend|Frontend|Frontend|Frontend|Frontend| 
-|:----:|:----:|:----:|:----:|:----:|:----:|
+|Frontend|Frontend|Frontend|Frontend|Frontend|
+|:----:|:----:|:----:|:----:|:----:|
 |<img src="https://avatars.githubusercontent.com/u/100946922?v=4"  width="100"/> | <img src="https://avatars.githubusercontent.com/u/134395531?v=4"  width="100"/> | <img src="https://avatars.githubusercontent.com/u/115131485?v=4"  width="100"/> | <img src="https://avatars.githubusercontent.com/u/108172790?v=4"  width="100"/> | <img src="https://avatars.githubusercontent.com/u/188745132?v=4"  width="100"/> | 
 |이희수|최윤서|김태환|홍종희|박수관|
 |[@lee123so](https://github.com/lee123so)|[@Yunseo Choi](https://github.com/cj2174)|[@TaeHwan Kim](https://github.com/aiden95328)|[@HO-NNE](https://github.com/HO-NNE)|[@Sugwan-p](https://github.com/Sugwan-p)|
