@@ -33,32 +33,6 @@ const renderSidebar = async () => {
         const listItem = createMenuItem(doc);
         menuList.appendChild(listItem);
       }
-      // 삭제 아이콘 클릭 시 문서 삭제
-      const deleteIcon = listItem.querySelector(".delete_icon");
-      deleteIcon.addEventListener("click", async (e) => {
-        e.stopPropagation(); // 클릭 이벤트 전파 막기
-        const confirmDelete = confirm("정말로 이 문서를 삭제하시겠습니까?");
-        if (confirmDelete) {
-          await deleteDocument(doc.id); // 문서 삭제
-        }
-      });
-
-
-      menuList.appendChild(listItem);
-
-      // 메뉴 클릭 시 하위 메뉴 토글
-      const menuBox = listItem.querySelector(".menu_box");
-      menuBox.addEventListener("click", () => {
-        const icon = menuBox.querySelector(".icon");
-        const isOpen = subMenu.style.display === "block";
-
-        // 하위 메뉴 토글
-        subMenu.style.display = isOpen ? "none" : "block";
-        icon.innerHTML = isOpen
-          ? '<i class="fa-duotone fa-solid fa-angle-right"></i>' // 화살표가 오른쪽으로 표시
-          : '<i class="fa-duotone fa-solid fa-angle-down"></i>'; // 화살표가 아래로 표시
-      });
-
     });
   } catch (error) {
     console.error("사이드바 렌더링 중 오류 발생:", error);
@@ -207,11 +181,11 @@ const displayDocumentContent = async (docId) => {
     }
 
     const doc = await response.json();
-    contentArea.innerHTML = `
-      <h2 data-id="${doc.id}">
-        <input type="text" value="${doc.title}" class="doc-title-input" />
-      </h2>
-    `;
+    // contentArea.innerHTML = `
+    //   <h2 data-id="${doc.id}">
+    //     <input type="text" value="${doc.title}" class="doc-title-input" />
+    //   </h2>
+    // `;
 
     // 제목 입력 필드에서 변경이 있을 때 사이드바 제목도 바로 업데이트
     const titleInput = contentArea.querySelector(".doc-title-input");

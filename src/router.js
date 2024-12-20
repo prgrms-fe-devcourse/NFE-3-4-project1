@@ -24,7 +24,6 @@ const routes = {
   "/post/:id": async (params) => {
     //동적 라우팅
     const currentDoc = await fetchDocumentById(params.id);
-    // const contentHtml = `<textarea>${currentDoc.content || ""}</textarea>`;
     const contentArea = document.querySelector(".main");
     const titleBox1 = document.querySelector(".title_box h2");
     titleBox1.textContent = currentDoc.title || "제목 없음";
@@ -41,7 +40,7 @@ const routes = {
     contentArea.appendChild(textarea);
     titleBox.addEventListener("input", autoSave(params.id));
     textarea.addEventListener("input", autoSave(params.id));
-    return contentHtml;
+    return contentArea.innerHTML;
   },
 };
 
