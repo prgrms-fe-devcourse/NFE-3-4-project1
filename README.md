@@ -14,5 +14,5 @@
   
   <img src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"> <img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
 
-<img src="https://github.com/user-attachments/assets/9ec8e780-8fee-4d4f-8da1-f2154d25c245"/>
-<img src="https://github.com/user-attachments/assets/369ef549-1462-4f26-b990-a04ec1208c13"/>
+<img src="https://github.com/prgrms-fe-devcourse/NFE-3-4-project1/blob/4/1_While/assets/sample.png?raw=true"/>
+<img src="https://github.com/prgrms-fe-devcourse/NFE-3-4-project1/blob/4/1_While/assets/sample.png?raw=true"/>
