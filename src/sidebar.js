@@ -181,11 +181,11 @@ const displayDocumentContent = async (docId) => {
     }
 
     const doc = await response.json();
-    // contentArea.innerHTML = `
-    //   <h2 data-id="${doc.id}">
-    //     <input type="text" value="${doc.title}" class="doc-title-input" />
-    //   </h2>
-    // `;
+    contentArea.innerHTML = `
+      <h2 data-id="${doc.id}">
+        <input type="text" value="${doc.title}" class="doc-title-input" />
+      </h2>
+    `;
 
     // 제목 입력 필드에서 변경이 있을 때 사이드바 제목도 바로 업데이트
     const titleInput = contentArea.querySelector(".doc-title-input");
