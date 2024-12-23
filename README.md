@@ -2,7 +2,7 @@
 
 ## 브랜치 규칙은 "회차/#팀(숫자)\_팀명"
 
-https://github.com/prgrms-fe-devcourse/NFE-3-4-project1
+https://github.com/prgrms-fe-devcourse/NFE3-4-1-project1
 
 프로젝트 관련 안내 문서는 https://www.notion.so/1-15a4873f28dd80888647c9118c3935b4?pvs=4 에서 확인하실 수 있습니다.
 
